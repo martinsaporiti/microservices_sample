@@ -7,12 +7,9 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-
 @app.route('/')
 def hello_world():
     return 'Hello, Ratings!'
-
-
 
 
 class Ratings(Resource):
@@ -37,6 +34,10 @@ class Ratings(Resource):
             {
                 'id': 5,
                 'rating' : 1123
+            },
+            {
+                'id': 6,
+                'rating' : 3452
             },
             
     ]
