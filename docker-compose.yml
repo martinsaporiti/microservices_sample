@@ -11,7 +11,7 @@ services:
     # - redis
   # redis:
   #   image: redis
-  ratins:
+  ratings:
     build: ./ratingsService/
     ports:
     - "5001:5000"

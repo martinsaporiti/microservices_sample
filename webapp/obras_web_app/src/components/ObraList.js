@@ -27,14 +27,16 @@ const ObraList = () => {
     }, [])
 
     return (
-        <div>
+        <div className="row">
             { obras.map( (obra) => (
-                
-                <Obra
-                    key = {obra.id}
-                    obra = {obra}
-                />
-            ))}
+                <div className="col-md-4">
+                    
+                    <Obra
+                        key = {obra.id}
+                        obra = {obra}
+                    />
+                </div>
+                ))}
         </div>
     );
 };

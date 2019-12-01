@@ -1,0 +1,19 @@
+  
+
+
+  .container{
+      margin-top: 2em;
+  }
+
+  .button-card{
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: scale-down;
+}

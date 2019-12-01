@@ -4,7 +4,10 @@ import ObraList from './components/ObraList';
 function App() {
 
   return (
-    <ObraList />
+    <div className="container">
+      <h1>Las réplicas de las mejores obras de arte!</h1>
+      <ObraList />
+    </div>
   );
 }
 

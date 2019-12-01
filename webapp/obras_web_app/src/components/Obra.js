@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import ObraList from './ObraList';
 
 const Obra = ({obra}) => {
 
@@ -26,8 +27,16 @@ const Obra = ({obra}) => {
     }, [])
 
     return (
-        <div>
-            {obra.name} - {rating}
+
+        <div className="card border-secondary mb-3">
+            <div className="card-header">{obra.name}</div>
+            <div className="card-body">
+            <h4 className="card-title">{obra.artist}</h4>
+            <p className="card-text">Rating: {rating}</p>
+            <p className="card-text">Price: ${obra.price}</p>
+            </div>
+            <img src={obra.img} className="card-img-top"></img>
+            <button type="button" class="btn btn-primary btn-sm button-card">Buy</button>
         </div>
     );
 };
