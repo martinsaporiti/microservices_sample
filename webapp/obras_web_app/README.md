@@ -4,7 +4,7 @@
 
 ```
 docker build -t obras_web_app:1.0.0 .
-docker run -it -p 8080:80 -e REACT_APP_OBRAS_API_URL=http://localhost/obras-catalog-service/ -e REACT_APP_RATINGS_API_URL=http://localhost/ratings-service/ --rm obras_web_app:1.0.0
+docker run -it -p 8080:80 --name obras_web_app -e REACT_APP_OBRAS_API_URL=http://localhost/obras-catalog-service/ -e REACT_APP_RATINGS_API_URL=http://localhost/ratings-service/ --rm obras_web_app:1.0.0
 
 ```
 

@@ -2,8 +2,8 @@ version: '3'
 services:
   obras:
     build: ./obrasCatalogService/
-    ports:
-    - "5000:5000"
+    # ports:
+    # - "5000:5000"
     # volumes:
     # - .:/code
     # - logvolume01:/var/log
@@ -13,15 +13,20 @@ services:
   #   image: redis
   ratings:
     build: ./ratingsService/
-    ports:
-    - "5001:5000"
-  webapp:
+    # ports:
+    # - "5001:5000"
+  obras_web_app:
     build: ./webapp/obras_web_app/
+    # ports:
+    # - "80:80"
+    environment:
+      - REACT_APP_OBRAS_API_URL=http://localhost/obras-catalog-service/
+      - REACT_APP_RATINGS_API_URL=http://localhost/ratings-service/
+  
+  proxy:
+    build: ./reverse_proxy
     ports:
     - "80:80"
-    environment:
-      - REACT_APP_OBRAS_API_URL=http://localhost:5000/obrasCatalogService/api/v1/
-      - REACT_APP_RATINGS_API_URL=http://localhost:5001/ratingsService/api/v1/obra/
 
 # volumes:
 #   logvolume01: {}

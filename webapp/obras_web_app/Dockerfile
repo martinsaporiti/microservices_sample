@@ -14,8 +14,6 @@ COPY . /app
 RUN npm run build
 
 
-
-
 FROM nginx:1.16.0-alpine
 RUN apk add --no-cache jq
 # RUN rm -rf /etc/nginx/conf.d

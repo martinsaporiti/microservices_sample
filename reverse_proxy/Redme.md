@@ -8,6 +8,8 @@ Para construir la imagen y levantar el contenedor ejecutar:
 docker build -t reverseproxy:1.0.0 .
 
 docker run -it --name proxy -p 80:80 --link=obras --link=ratings  --rm reverseproxy:1.0.0
+
+docker run -it --name proxy -p 80:80 --link=obras --link=ratings --link=obras_web_app  --rm reverseproxy:1.0.0
 ```
 
 ### Test
