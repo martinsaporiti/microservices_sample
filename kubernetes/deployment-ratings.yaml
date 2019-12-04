@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ratings
+  labels:
+    app: ratings
+spec:
+  ports:
+    - port: 5000
+  selector:
+    app: ratings
+    tier: backend
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ratings
+spec:
+  selector:
+    matchLabels:
+      app: ratings
+      tier: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ratings
+        tier: backend
+    spec:
+      containers:
+      - name: ratings
+        imagePullPolicy: IfNotPresent
+        image: martinsaporiti/ratings_service:1.0.0
+        ports:
+        - containerPort: 5000

@@ -2,6 +2,7 @@ version: '3'
 services:
   obras:
     build: ./obrasCatalogService/
+    image: obras_catalog_service:1.0.0
     # ports:
     # - "5000:5000"
     # volumes:
@@ -13,10 +14,12 @@ services:
   #   image: redis
   ratings:
     build: ./ratingsService/
+    image: ratings_service:1.0.0
     # ports:
     # - "5001:5000"
   obras_web_app:
     build: ./webapp/obras_web_app/
+    image: obras_web_app:1.0.0
     # ports:
     # - "80:80"
     environment:
@@ -25,6 +28,7 @@ services:
   
   proxy:
     build: ./reverse_proxy
+    image: reverseproxy:1.0.0
     ports:
     - "80:80"
 
