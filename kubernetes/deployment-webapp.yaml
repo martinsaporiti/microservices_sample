@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp
+  name: webapp-service
   labels:
     app: webapp
 spec:
   ports:
-    - port: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
   selector:
     app: webapp
     tier: frontend
@@ -37,9 +39,9 @@ spec:
         image: martinsaporiti/obras_web_app:1.0.0
         env:
         - name: REACT_APP_OBRAS_API_URL
-          value: http://localhost/obras/obrasCatalogService/api/v1/
+          value: obras-service/obrasCatalogService/api/v1/
           # value: obras/obrasCatalogService/api/v1/
         - name: REACT_APP_RATINGS_API_URL
-          value: http://localhost/ratings/ratingsService/api/v1/obra/
+          value: ratings-service.service/ratingsService/api/v1/obra/
         ports:
         - containerPort: 80
