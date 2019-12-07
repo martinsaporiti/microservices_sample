@@ -161,3 +161,28 @@ kubectl create -f ./kubernetes/ingress-obras.yaml --namespace=obras
 kubectl apply -f ./kubernetes/ingress-obras.yaml --namespace=obras
 ```
 
+
+
+## Katacoda
+
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/deployment-obras.yaml
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/deployment-ratings.yaml
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/deployment-webapp.yaml
+
+helm init
+
+helm install stable/nginx-ingress --name ingress-nginx
+
+helm ls
+
+kubectl run nginx --image=nginx
+
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-obras.yaml
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-ratings.yaml
+
+kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-webapp.yaml

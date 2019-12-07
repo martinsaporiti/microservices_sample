@@ -36,7 +36,7 @@ spec:
       containers:
       - name: webapp
         imagePullPolicy: IfNotPresent
-        image: martinsaporiti/obras_web_app:1.0.0
+        image: martinsaporiti/obras_web_app:1.0.1
         env:
         - name: REACT_APP_OBRAS_API_URL
           value: obras-service/obrasCatalogService/api/v1/
