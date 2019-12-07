@@ -12,7 +12,7 @@ spec:
   selector:
     app: webapp
     tier: frontend
-  type: LoadBalancer
+  # type: LoadBalancer
 
 ---
 
