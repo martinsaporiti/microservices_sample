@@ -165,6 +165,7 @@ kubectl apply -f ./kubernetes/ingress-obras.yaml --namespace=obras
 
 ## Katacoda
 
+https://www.katacoda.com/fengyuanyang/courses/kubernetes/kubernetes-ingress
 
 kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/deployment-obras.yaml
 
@@ -185,4 +186,4 @@ kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices
 
 kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-ratings.yaml
 
-kubectl create -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-webapp.yaml
+kubectl apply -f https://raw.githubusercontent.com/martinsaporiti/microservices_sample/master/kubernetes/ingress-webapp.yaml
