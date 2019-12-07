@@ -6,7 +6,9 @@ metadata:
     app: ratings
 spec:
   ports:
-    - port: 5000
+  - protocol: TCP
+    port: 5000
+    targetPort: http
   selector:
     app: ratings
     tier: backend
@@ -36,4 +38,5 @@ spec:
         imagePullPolicy: IfNotPresent
         image: martinsaporiti/ratings_service:1.0.0
         ports:
-        - containerPort: 5000
+          - name: http
+            containerPort: 5000

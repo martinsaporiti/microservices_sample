@@ -37,8 +37,9 @@ spec:
         image: martinsaporiti/obras_web_app:1.0.0
         env:
         - name: REACT_APP_OBRAS_API_URL
-          value: obras
+          value: http://localhost/obras/obrasCatalogService/api/v1/
+          # value: obras/obrasCatalogService/api/v1/
         - name: REACT_APP_RATINGS_API_URL
-          value: ratings
+          value: http://localhost/ratings/ratingsService/api/v1/obra/
         ports:
         - containerPort: 80

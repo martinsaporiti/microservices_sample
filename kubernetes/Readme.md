@@ -89,6 +89,7 @@ kubectl describe deployment/ratings --namespace=obras
 ```
 
 7. Obtener los servicios:
+
 ```
 kubectl get service --namespace=obras
 ```
@@ -97,6 +98,7 @@ kubectl get service --namespace=obras
 
 ```
 minikube service ratings --url --namespace=obras
+```
 
 
 ## Aplicación web
@@ -148,3 +150,14 @@ kubectl get service --namespace=obras
 ```
 minikube service webapp --url --namespace=obras
 ```
+
+## Ingress de Obras
+
+* [How to connect to your Kubernetes services?](https://blog.learnk8s.io/connect-service-kubernetes-7cb346cf2f64)
+* [Getting external traffic into Kubernetes – ClusterIp, NodePort, LoadBalancer, and Ingress](https://www.ovh.com/blog/getting-external-traffic-into-kubernetes-clusterip-nodeport-loadbalancer-and-ingress/)
+
+```
+kubectl create -f ./kubernetes/ingress-obras.yaml --namespace=obras
+kubectl apply -f ./kubernetes/ingress-obras.yaml --namespace=obras
+```
+
